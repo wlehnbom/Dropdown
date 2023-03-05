@@ -1,0 +1,71 @@
+@import '_variables.scss';
+
+.menu {
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 20px;
+  
+    .menu-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+  
+      .menu-item {
+        font-size: $list-font-size;
+        position: relative;
+        transition: transform 0.2s ease-in-out;
+
+
+        &:hover {
+          transform: scale(1.1);
+        }
+  
+        &.menu-dropdown:hover > .menu-sublist {
+          display: block;
+        }
+  
+        > a {
+          color: $primary-color;
+          text-decoration: underline;
+          display: block;
+          padding: 10px;
+        }
+
+        > a:hover {
+          text-decoration-color: magenta;
+        }
+  
+        .menu-sublist {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          margin: 0;
+          padding: 0;
+          display: none;
+          list-style: none;
+  
+          .menu-subitem {
+            width: 100%;
+  
+            > a {
+              color: $primary-color;
+              padding: 10px;
+              text-decoration: none;
+              display: block;
+              
+            }
+  
+            > a:hover {
+              color: $primary-color;
+              text-decoration: underline;
+              text-decoration-thickness: 4px;
+              text-decoration-color: magenta;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  

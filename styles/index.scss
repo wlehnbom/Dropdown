@@ -1,0 +1,86 @@
+@import '_nav.scss';
+@import '_main.scss';
+@import '_fonts.scss';
+@import '_variables.scss';
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0 12em 0 12em;
+    background-image: url(../images/bg.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+html {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.phone-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    body {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        background-image: url(../images/bg-phone.png); 
+    }
+    
+    .phone-menu {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        
+        flex-direction: column;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .burger-button {
+        font-size: 100px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .burger-button-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .phone-menu-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        & ul {
+            list-style: none;
+        }
+
+        & li {
+            padding: 3em;
+        }
+
+        & a {
+            text-decoration: underline;
+            color: $primary-color;
+            font-size: $phone-list-font-size;
+        }
+    }
+}
